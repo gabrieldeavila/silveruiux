@@ -1,0 +1,119 @@
+@import fonts
+@import mixins
+@import animations
+@import icons
+@import extra
+
+*
+  margin: 0
+  padding: 0
+  border-box: 0
+  font-family: 'Montserrat', sans-serif
+
+body
+  background-color: $primary
+
+nav
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  background-color: $secondary
+  .menu
+    display: none
+
+.open-menu
+  display: none
+
+section
+  article 
+    .working
+        font-weight: 600
+        border: 1px solid $green
+        border-radius: 4px
+        color: $green
+        padding: 2% 14%
+        @include flex(row, space-evenly)
+    .notWorking
+      width: 100%
+      div
+        margin-bottom: 1rem
+        @include flex
+        span
+          font-size: 19px
+        i
+          background-size: 23px
+          margin-right: 1rem
+      font-weight: 600
+      border-radius: 4px
+      color: $blue
+      border: 1px solid $blue
+      padding: 2% 10%
+      @include flex(column, center)
+      p
+        text-align: center
+  .main
+    h2
+      color: $normal
+    .status
+      &-list
+        border-bottom: 0.1px solid $text
+        background-color: $lilac
+        padding: 3%
+        width: 94%
+        @include flex(row, space-between)
+        &:last-child
+          border-bottom: none
+      &-info
+        h3
+          color: $text 
+          font-weight: 600
+          @include flex
+        p
+          color: $info
+          font-weight: 600
+
+footer
+  color: $text
+  @include flex(column)
+  font-weight: 700
+  padding-bottom: 5% 
+  img
+    transform: scale(0.20)
+  p
+    margin-top: -9%
+
+
+.tooltip
+  color: white
+  background: $secondary
+  display: inline
+  font-weight: 600
+  font-size: 15px
+  border-radius: 4px
+  position: absolute
+  left: 10px
+  bottom: 23px
+  padding: 0 1rem
+  height: 3rem
+  &::before
+    content: ""
+    clip-path: polygon(50% 58%, 1% 0, 100% 0)
+    background-color: $secondary
+    width: 2rem
+    height: 2rem
+    bottom: -1.8rem
+    left: 6px
+    position: absolute
+  p
+    height: 100%
+    display: flex
+    align-items: center
+
+ul
+  li
+    cursor: pointer
+    transition: 0.51s ease
+    &:hover
+      color: $primary !important
+      transition: 0.51s ease
+
+@import desktop
+@import mobile

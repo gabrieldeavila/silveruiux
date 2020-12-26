@@ -1,0 +1,12 @@
+@mixin flex($dir:row, $jus:center, $ali:center, $wrap: wrap)
+  display: flex
+  flex-direction: $dir
+  justify-content: $jus
+  align-items: $ali
+  flex-wrap: $wrap
+
+@mixin icons($image, $size, $pos:center, $rep:no-repeat)
+  background-image: url($image)
+  background-size: $size
+  background-position: $pos
+  background-repeat: $rep

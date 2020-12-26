@@ -1,0 +1,46 @@
+nav
+  .logo
+    width: 12%
+  @include flex(row, space-between)
+  padding: 2% 5%
+  .desktop-menu
+    @include flex
+    ul
+      li
+        color: $text
+        font-weight: 600
+        display: inline
+        &::after
+         content: ""
+         margin: 0 1rem  
+
+
+section 
+  margin-top: 5rem !important
+  article
+    .working
+      width: 100%
+      padding: 2% 30%
+    &:first-child
+      @include flex
+    width: 100%
+    #img
+      margin-bottom: 2.5rem
+      width: 78%
+    
+  .main
+    .status
+      @include flex
+    .status-list
+      width: 43.91%
+      &:nth-child(even)
+        border-left: 0.1px solid $text
+      &:nth-last-child(2)
+        border-radius: 0px 0px 0px 3px 
+        border-bottom: none
+      &:first-child
+        border-radius: 3px 0px 0px 0px 
+      &:last-child
+        border-radius: 0px 0px 3px 0px 
+      &:nth-child(2)
+        border-radius: 0px 3px 0px 0px 
