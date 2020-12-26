@@ -1,5 +1,5 @@
 <h1 align="center"> SilverBook </h1> <br>
-![Preview-Screens](https://github.com/gabrieldeavila/silveruiux/blob/main/screenshots/default.png)
+<img src="https://github.com/gabrieldeavila/silveruiux/blob/main/screenshots/default.png"/>
 
 ## What is this project?
   It is a responsive status app, like github status, where companies customers can see some status informations, such as API. 
