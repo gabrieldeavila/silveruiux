@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../src/css/main.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Silver</title>
+  </head>
+  <body>
+    <nav>
+      <img class="logo" src="./img/default--logo-white.svg" alt="" />
+      <img class="menu" src="./img/icons/menu.svg" alt="" />
+      <div class="desktop-menu">
+        <ul>
+          <li>Home</li>
+          <li data-href="https://pt.wiktionary.org/wiki/ajuda">Ajuda</li>
+          <li data-href="https://twitter.com/home?lang=pt">Twitter</li>
+          <li data-href="https://www.youtube.com/">Youtube</li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="open-menu">
+      <ul>
+        <li>Home</li>
+        <li data-href="https://pt.wiktionary.org/wiki/ajuda">Ajuda</li>
+        <li data-href="https://twitter.com/home?lang=pt">Twitter</li>
+        <li data-href="https://www.youtube.com/">Youtube</li>
+      </ul>
+    </div>
+    <section class="container mt-1">
+      <article>
+        <img id='img' src="./img/analytics_team_monochromatic.svg" alt="" />
+        <div class="working ">
+          <i class="check-icon"></i> Tudo Funcionando!
+        </div>
+
+        <div class="notWorking">
+          <div>
+            <i class="round-tool"></i> <span>Em manutenção!</span>
+          </div>
+          <p>Estamos arrumando as Ações Silver, em breve tudo estará normal.</p>
+        </div>
+      </article>
+
+      <article class="main mt-2">
+        <h2 class="mb-1">Status atual:</h2>
+        <div class="status">
+          <div class="status-list">
+            <div class="status-info">
+              <h3>Operações Silver <i data-info='Tempo pesquisa' class="interrogation"></i></h3>
+              <p>Normal</p>
+            </div>
+            <i class="status-icon round-check"></i>
+          </div>
+          <div class="status-list">
+            <div class="status-info">
+              <h3>Requisições API <i data-info='Aquisição de dados' class="interrogation"></i></h3>
+              <p>Normal</p>
+            </div>
+            <i class="status-icon round-check"></i>
+          </div>
+          <div class="status-list">
+            <div class="status-info">
+              <h3>Webhooks <i data-info='Tempo de resposta' class="interrogation"></i></h3>
+              <p>Normal</p>
+            </div>
+            <i class="status-icon round-check"></i>
+          </div>
+          <div class="status-list">
+            <div class="status-info">
+              <h3>Issues <i data-info='Bugs para correção' class="interrogation"></i></h3>
+              <p>Normal</p>
+            </div>
+            <i class="status-icon round-check"></i>
+          </div>
+          <div class="status-list">
+            <div class="status-info">
+              <h3>Páginas Silver <i data-info='Atualização páginas' class="interrogation"></i></h3>
+              <p>Normal</p>
+            </div>
+            <i class="status-icon round-check"></i>
+          </div>
+          <div class="status-list">
+            <div class="status-info">
+              <h3>Ações Silver <i data-info='Computação de dados'  class="interrogation"></i></h3>
+              <p id='changeThisText'>Normal</p>
+            </div>
+            <i id="changeThisClass" class="status-icon"></i>
+          </div>
+        </div>
+      </article>
+    </section>
+    <footer>
+        <img src="../public/img/default-monochrome-white.svg" alt="">
+      <p>
+        2020 - 2020
+      </p>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../src/js/open-menu.js"></script>
+    <script src="../src/js/tooltip.js"></script>
+    <script src="../src/js/randomWork.js"></script>
+    <script>
+
+      $("li").click((e)=>{
+        var $this = e.target;
+        if($($this).attr("data-href") !== undefined)
+          window.open($($this).attr("data-href"), "_blank")
+      })
+      function changeImg () {
+        var wid;
+        wid = parseInt($("body").css("width"));
+        if(wid > 700){
+          $("#img").attr("src","../public/img/undraw_under_construction_46pa.svg")
+          $(".logo").attr("src","../public/img/default-monochrome-white.svg")
+        }
+        else{
+          $("#img").attr("src","../public/img/analytics_team_monochromatic.svg")
+          $(".logo").attr("src","../public/img/default--logo-white.svg")
+        }
+      }
+
+      $(window).resize(()=>{changeImg()});
+      changeImg()
+    </script>
+  </body>
+</html>
