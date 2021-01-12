@@ -4,4 +4,4 @@
 ## What is this project?
   It is a responsive status app, like github status, where companies customers can see some status informations, such as API. 
   <br>
-  Obs.: all of the data used in this app are fake, the goal was to create mockups (using mobile-first) and recreate them.
+  Obs.: all of the data used in this app are fake, the goal was to create a mockup (using mobile-first) and recreate it.
